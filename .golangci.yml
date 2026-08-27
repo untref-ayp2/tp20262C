@@ -1,0 +1,169 @@
+formatters:
+  enable:
+    - gofumpt
+    - golines
+  settings:
+    golines:
+      max-len: 100
+      tab-len: 2
+      shorten-comments: false
+      reformat-tags: true
+      chain-split-dots: true
+linters:
+  default: all
+  disable:
+    - arangolint
+    - bodyclose
+    - canonicalheader
+    - clickhouselint
+    - containedctx
+    - durationcheck
+    - errchkjson
+    - exhaustruct
+    - fatcontext
+    - forbidigo
+    - ginkgolinter
+    - gocheckcompilerdirectives
+    - gochecksumtype
+    - gomoddirectives
+    - gomodguard
+    - gomodguard_v2
+    - gosmopolitan
+    - iotamixing
+    - loggercheck
+    - mirror
+    - noctx
+    - nosprintfhostport
+    - promlinter
+    - rowserrcheck
+    - sloglint
+    - spancheck
+    - sqlclosecheck
+    - unqueryvet
+    - wsl
+    - zerologlint
+  enable:
+    - asasalint
+    - asciicheck
+    - bidichk
+    - copyloopvar
+    - cyclop
+    - decorder
+    - depguard
+    - dogsled
+    - dupl
+    - dupword
+    - embeddedstructfieldcheck
+    - err113
+    - errcheck
+    - errname
+    - errorlint
+    - exhaustive
+    - exhaustruct_v5
+    - forcetypeassert
+    - funcorder
+    - funlen
+    - gochecknoglobals
+    - gochecknoinits
+    - gocognit
+    - goconst
+    - gocritic
+    - gocyclo
+    - godoclint
+    - godot
+    - godox
+    - goprintffuncname
+    - gosec
+    - govet
+    - grouper
+    - iface
+    - importas
+    - inamedparam
+    - ineffassign
+    - interfacebloat
+    - intrange
+    - ireturn
+    - lll
+    - maintidx
+    - makezero
+    - misspell
+    - mnd
+    - modernize
+    - musttag
+    - nakedret
+    - nestif
+    - nilerr
+    - nilnesserr
+    - nilnil
+    - nlreturn
+    - noinlineerr
+    - nolintlint
+    - nonamedreturns
+    - paralleltest
+    - perfsprint
+    - prealloc
+    - predeclared
+    - protogetter
+    - reassign
+    - recvcheck
+    - revive
+    - staticcheck
+    - tagalign
+    - tagliatelle
+    - testableexamples
+    - testifylint
+    - testpackage
+    - thelper
+    - tparallel
+    - unconvert
+    - unparam
+    - unused
+    - usestdlibvars
+    - usetesting
+    - varnamelen
+    - wastedassign
+    - whitespace
+    - wrapcheck
+    - wsl_v5
+  settings:
+    decorder:
+      dec-order:
+        - type
+        - const
+        - var
+        - func
+      ignore-underscore-vars: false
+      disable-dec-order-check: false
+      disable-init-func-first-check: false
+      disable-dec-num-check: false
+      disable-type-dec-num-check: false
+      disable-const-dec-num-check: false
+      disable-var-dec-num-check: false
+    depguard:
+      rules:
+        main:
+          allow:
+            - $gostd
+          deny:
+            - pkg: "math/rand$"
+              desc: use math/rand/v2
+            - pkg: "github.com/sirupsen/logrus"
+              desc: not allowed
+            - pkg: "github.com/pkg/errors"
+              desc: Should be replaced by standard lib errors package
+          list-mode: lax
+    errcheck:
+      check-type-assertions: true
+      check-blank: false
+      disable-default-exclusions: false
+      verbose: false
+    ireturn:
+      allow:
+        - anon
+        - error
+        - generic
+        - empty
+        - stdlib
+run:
+  timeout: 5m
+version: "2"

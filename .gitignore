@@ -1,0 +1,32 @@
+# Binarios
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Tests
+*.test
+*.out
+*.test.exe
+
+# Go workspace
+go.work
+go.work.sum
+
+# Directorios IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Vendor (si se usa)
+/vendor/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# direnv
+.envrc
