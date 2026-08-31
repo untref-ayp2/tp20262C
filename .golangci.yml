@@ -13,71 +13,92 @@ linters:
   default: all
   disable:
     - arangolint
+    - bidichk
     - bodyclose
     - canonicalheader
     - clickhouselint
-    - containedctx
+    - contextcheck
+    - decorder
+    - depguard
+    - dupword
     - durationcheck
-    - errchkjson
+    - embeddedstructfieldcheck
     - exhaustruct
+    - exhaustruct_v5
+    - exptostd
     - fatcontext
     - forbidigo
+    - funcorder
     - ginkgolinter
     - gocheckcompilerdirectives
-    - gochecksumtype
+    - gochecknoinits
+    - gochecksumtype # Revisar uso de sum types en enums (roles de cofres o tipos de ítems)
+    - gocyclo
+    - godox
+    - goheader
     - gomoddirectives
     - gomodguard
     - gomodguard_v2
+    - gosec
     - gosmopolitan
+    - grouper
+    - importas
     - iotamixing
     - loggercheck
     - mirror
+    - misspell
+    - nlreturn
     - noctx
+    - nonamedreturns
     - nosprintfhostport
+    - paralleltest
+    - perfsprint
+    - prealloc
+    - predeclared
     - promlinter
+    - protogetter
+    - revive
     - rowserrcheck
     - sloglint
     - spancheck
     - sqlclosecheck
+    - tagalign
+    - tagliatelle
+    - testableexamples
+    - testifylint
+    - testpackage
+    - tparallel
     - unqueryvet
+    - usetesting
+    - varnamelen
     - wsl
+    - wsl_v5
     - zerologlint
   enable:
     - asasalint
     - asciicheck
-    - bidichk
+    - containedctx
     - copyloopvar
     - cyclop
-    - decorder
-    - depguard
     - dogsled
     - dupl
-    - dupword
-    - embeddedstructfieldcheck
     - err113
     - errcheck
+    - errchkjson
     - errname
     - errorlint
     - exhaustive
-    - exhaustruct_v5
     - forcetypeassert
-    - funcorder
     - funlen
     - gochecknoglobals
-    - gochecknoinits
     - gocognit
     - goconst
     - gocritic
-    - gocyclo
     - godoclint
     - godot
-    - godox
     - goprintffuncname
-    - gosec
     - govet
-    - grouper
     - iface
-    - importas
     - inamedparam
     - ineffassign
     - interfacebloat
@@ -86,7 +107,6 @@ linters:
     - lll
     - maintidx
     - makezero
-    - misspell
     - mnd
     - modernize
     - musttag
@@ -95,36 +115,19 @@ linters:
     - nilerr
     - nilnesserr
     - nilnil
-    - nlreturn
     - noinlineerr
     - nolintlint
-    - nonamedreturns
-    - paralleltest
-    - perfsprint
-    - prealloc
-    - predeclared
-    - protogetter
     - reassign
     - recvcheck
-    - revive
     - staticcheck
-    - tagalign
-    - tagliatelle
-    - testableexamples
-    - testifylint
-    - testpackage
     - thelper
-    - tparallel
     - unconvert
     - unparam
     - unused
     - usestdlibvars
-    - usetesting
-    - varnamelen
     - wastedassign
     - whitespace
     - wrapcheck
-    - wsl_v5
   settings:
     decorder:
       dec-order:
