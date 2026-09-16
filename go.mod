@@ -1,3 +1,3 @@
-module trabajo-practico-2026-1c
+module tp-red-logistica
 
 go 1.27.0

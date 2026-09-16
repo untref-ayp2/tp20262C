@@ -32,7 +32,7 @@ linters:
     - ginkgolinter
     - gocheckcompilerdirectives
     - gochecknoinits
-    - gochecksumtype # Revisar uso de sum types en enums (roles de cofres o tipos de ítems)
+    - gochecksumtype
     - gocyclo
     - godox
     - goheader

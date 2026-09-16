@@ -1,0 +1,41 @@
+{
+  "factor_consumo": 1,
+  "robopuertos": [
+    { "id": "P1", "x": 0, "y": 0, "alcance": 10 }
+  ],
+  "cofres": [
+    {
+      "id": "C1",
+      "rol": "provision",
+      "x": 2,
+      "y": 3,
+      "inventario": { "hierro": 10 },
+      "solicitudes": []
+    },
+    {
+      "id": "C2",
+      "rol": "solicitud",
+      "x": 5,
+      "y": 1,
+      "inventario": {},
+      "solicitudes": [ { "item": "hierro", "cantidad": 5 } ]
+    },
+    {
+      "id": "C3",
+      "rol": "almacenamiento",
+      "x": 8,
+      "y": 8,
+      "inventario": {},
+      "solicitudes": []
+    }
+  ],
+  "robots": [
+    {
+      "id": "R1",
+      "bateria_maxima": 100,
+      "bateria_actual": 100,
+      "capacidad_carga": 5,
+      "robopuerto_origen": "P1"
+    }
+  ]
+}

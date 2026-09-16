@@ -1,0 +1,65 @@
+{
+  "factor_consumo": 1,
+  "robopuertos": [
+    { "id": "P1", "x": 0, "y": 0, "alcance": 15 },
+    { "id": "P2", "x": 20, "y": 0, "alcance": 15 }
+  ],
+  "cofres": [
+    {
+      "id": "C1",
+      "rol": "provision",
+      "x": 3,
+      "y": 4,
+      "inventario": { "hierro": 30 },
+      "solicitudes": []
+    },
+    {
+      "id": "C2",
+      "rol": "provision",
+      "x": 18,
+      "y": 4,
+      "inventario": { "circuito": 20 },
+      "solicitudes": []
+    },
+    {
+      "id": "C3",
+      "rol": "solicitud",
+      "x": 6,
+      "y": 8,
+      "inventario": {},
+      "solicitudes": [ { "item": "hierro", "cantidad": 10 } ]
+    },
+    {
+      "id": "C4",
+      "rol": "solicitud",
+      "x": 23,
+      "y": 3,
+      "inventario": {},
+      "solicitudes": [ { "item": "circuito", "cantidad": 8 } ]
+    },
+    {
+      "id": "C5",
+      "rol": "almacenamiento",
+      "x": 25,
+      "y": 7,
+      "inventario": {},
+      "solicitudes": []
+    }
+  ],
+  "robots": [
+    {
+      "id": "R1",
+      "bateria_maxima": 200,
+      "bateria_actual": 200,
+      "capacidad_carga": 10,
+      "robopuerto_origen": "P1"
+    },
+    {
+      "id": "R2",
+      "bateria_maxima": 200,
+      "bateria_actual": 200,
+      "capacidad_carga": 10,
+      "robopuerto_origen": "P2"
+    }
+  ]
+}
